@@ -1,0 +1,485 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievers University - Application Instructions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+
+        #xBar {
+            display: none;
+        }
+
+        #menuBar.active {
+            display: none;
+        }
+
+        #navBar.active {
+            display: flex;
+        }
+
+        #xBar.active {
+            display: flex;
+        }
+
+    </style>
+</head>
+<body class="min-h-screen bg-white font-sans">
+    <!-- Header -->
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo and University Name -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 flex items-center justify-center">
+                        <img src="{% static './assets/achieverslogo.png' %}" />
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">ACHIEVERS</h1>
+                        <h2 class="text-xl font-bold text-gray-800">UNIVERSITY</h2>
+                    </div>
+                </div>
+                <!-- Top Right Links -->
+                <div class="hidden lg:flex items-center space-x-6 text-sm">
+                    <span>Information For</span>
+                    <span>Virtual Tour</span>
+                    <span>A - Z</span>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs">ENHANCED BY</span>
+                        <span class="font-bold">Google</span>
+                        <input type="search" placeholder="Search..." class="w-32 h-8 border border-gray-300 rounded px-2">
+                    </div>
+                </div>
+
+                <img class="w-[40px] lg:hidden" id="menuBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-menu_ew07ve.svg" alt="" />
+                <img class="w-[40px] lg:hidden" id="xBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-x_tfiznr.svg" alt="" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white lg:bg-green-600 hidden lg:block " id="navBar">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-centre justify-center items-center lg:space-x-8 py-3">
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
+                <a href="" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BROCHURE</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid lg:grid-cols-4 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-3 space-y-8">
+                <!-- Core Values Banner -->
+                <div class="bg-white shadow rounded-lg">
+                    <div class="bg-green-100 rounded-lg p-6 relative">
+                        {% comment %} <div class="absolute top-4 right-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-blue-500 rounded-full flex items-center justify-center">
+                                <div class="text-white text-xs font-bold text-center">CORE<br>VALUES</div>
+                            </div>
+                        </div> {% endcomment %}
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            As our guiding philosophy, the Achievers experience is anchored on Seven (7) Core values which are:
+                            Spirituality, Possibility mentality, Capacity Building, Integrity, Responsibility, Diligence and
+                            sacrifice.
+                        </p>
+                        <div class="text-green-800 font-bold">#ACHIEVERS UNIVERSITY</div>
+                    </div>
+                </div>
+
+                <!-- Application Guidelines -->
+                <div>
+                    <h1 class="text-2xl font-bold text-green-600 mb-6">
+                        GUIDELINES FOR COMPLETING THE ONLINE PAYMENT AND APPLICATION FORM
+                    </h1>
+                    <div class="space-y-6">
+                        <!-- Step 1 -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                                <div class="flex-1">
+                                    <p class="text-gray-700 leading-relaxed">
+                                        Visit our Admission application portal via 
+                                        <a href="http://admission.achievers.edu.ng/app" class="text-blue-600 hover:underline font-medium"> http://admission.achievers.edu.ng/app</a> 
+                                        to complete the application payment form.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                                <div class="flex-1">
+                                    <p class="text-gray-700 leading-relaxed">
+                                        Complete the application payment form with the necessary and accurate details. Please note
+                                        that your UTME registration number, a valid email address and GSM number will be required.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+                                <div class="flex-1">
+                                    <p class="text-gray-700 leading-relaxed">
+                                        After completing and submitting the application payment form, a preview of the application is
+                                        displayed. Verify its authenticity and correctness, then click on "Pay" button to make
+                                        payment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
+                                <div class="flex-1">
+                                    <p class="text-gray-700 leading-relaxed">
+                                        You will be redirected to the payment page where you are expected to make payment of 
+                                        <strong>₦10,000</strong> application fee along with a processing charge depending on the
+                                        payment channel selected. Please note that you will need an ATM Card (Verve, Visa, MasterCard
+                                        or E-Tranzact Card) to complete your payment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">5</div>
+                                <div class="flex-1">
+                                    <p class="text-gray-700 leading-relaxed">
+                                        After successful payment, you will receive a confirmation email with your application details
+                                        and reference number. Keep this information safe for future reference.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 6 -->
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-sm">6</div>
+                                <div class="flex-1">
+                                    <p class="text-gray-700 leading-relaxed">
+                                        Log back into the application portal using your credentials to complete the full application
+                                        form with your personal details, academic history, and programme choices.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 7 -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">7</div>
+                                <div class="flex-1">
+                                    <p class="text-gray-700 leading-relaxed">
+                                        Upload all required documents as specified in the document checklist below. Ensure all
+                                        documents are clear, legible, and in the accepted formats (PDF, JPG, PNG).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 8 -->
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-sm">8</div>
+                                <div class="flex-1">
+                                    <p class="text-gray-700 leading-relaxed">
+                                        Please note that there will be POST-UTME screening exercise, which will take place at a later
+                                        date to be announced. Further information will be communicated via the email address and phone
+                                        number supplied when filling the application fee form.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Required Documents -->
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">
+                        PLEASE NOTE: You are expected to upload the following documents and come along with the original
+                        copies and photocopies of all necessary documents at scheduled Post-UTME screening exercise
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-red-600"></i>
+                                <span class="text-gray-700">Printed Application Form</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-red-600"></i>
+                                <span class="text-gray-700">Copy of UTME Result Slip</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-red-600"></i>
+                                <span class="text-gray-700">Copy of 'O' Level results</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-red-600"></i>
+                                <span class="text-gray-700">2 Passport Photographs</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-red-600"></i>
+                                <span class="text-gray-700">Original copy of sponsorship letter from Parents/Guardian</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-red-600"></i>
+                                <span class="text-gray-700">Letter from your religious leader</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-red-600"></i>
+                                <span class="text-gray-700">Copy of Birth certificate</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="chevron-right" class="w-4 h-4 text-red-600"></i>
+                                <span class="text-gray-700">State of origin certificate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Important Notes -->
+                <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-red-800 mb-3">Important Notes</h3>
+                    <ul class="space-y-2 text-red-700">
+                        <li class="flex items-start space-x-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 mt-0.5"></i>
+                            <span>Ensure all information provided is accurate and truthful</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 mt-0.5"></i>
+                            <span>Keep your application reference number safe for future correspondence</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 mt-0.5"></i>
+                            <span>Application fee is non-refundable</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 mt-0.5"></i>
+                            <span>Incomplete applications will not be processed</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Apply Button -->
+                <div class="text-center">
+                    <button class="bg-green-600 hover:bg-green-700 text-white px-12 py-4 text-lg font-bold rounded">
+                        CLICK HERE TO APPLY
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-1">
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">DEPARTURE PHILOSOPHY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">ADMISSION POLICY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">REQUIREMENTS</button>
+                <button class="w-full text-left text-green-600 bg-green-50 px-4 py-3 rounded">APPLICATION INSTRUCTION</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">DEGREE PROGRAMMES</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">INTERNATIONAL STUDENT COMMUNITY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">GIVEN ADMISSION - WHAT NEXT?</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">HOW TO MAKE SCHOOL FEES AND ACCEPTANCE FEES PAYMENT</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">VISIT ACHIEVERS UNIVERSITY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">PROHIBITED ITEMS</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">FAQ</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">STUDENT HANDBOOK</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">DISCLAIMER</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-4 right-4">
+        <div class="bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg">
+            <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-sm font-semibold">Online</span>
+            </div>
+            <p class="text-xs mt-1">
+                Welcome to our site. If you need help<br>
+                simply reply to this message, we are<br>
+                online and ready to help.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white">
+        <div class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-5 gap-8">
+                    <!-- Information About -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION ABOUT</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">The university</a></li>
+                            <li><a href="#" class="hover:underline">Fees & Funding</a></li>
+                            <li><a href="#" class="hover:underline">Libraries</a></li>
+                            <li><a href="#" class="hover:underline">Sport @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Health Care @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Students Affairs</a></li>
+                        </ul>
+                    </div>
+                    <!-- Information For -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION FOR</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Prospective Students</a></li>
+                            <li><a href="#" class="hover:underline">Current Students</a></li>
+                            <li><a href="#" class="hover:underline">Parents & Guardians</a></li>
+                            <li><a href="#" class="hover:underline">Current Staff</a></li>
+                            <li><a href="#" class="hover:underline">Visitors & Tourist</a></li>
+                            <li><a href="#" class="hover:underline">Alumni</a></li>
+                        </ul>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Contact us</a></li>
+                            <li><a href="#" class="hover:underline">Job & vacancies</a></li>
+                            <li><a href="#" class="hover:underline">Media</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reaching Us -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">REACHING US</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <p>Km 4, Owo-Benin Road,</p>
+                                    <p>PMB 1010, Owo Road</p>
+                                    <p>Owo, Ondo State</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-2 h-3 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <div>
+                                    <p>8 A.M. - 5 P.M.</p>
+                                    <p>+234 8168064525</p>
+                                    <p>+234 7038505649</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-3 h-2 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <p>admissions@achievers.edu.ng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Community -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">SOCIAL COMMUNITY</h3>
+                        <div class="space-y-3">
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
+                                    <span class="text-xs font-bold">f</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
+                                    <span class="text-xs font-bold">t</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
+                                    <span class="text-xs font-bold">▶</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                                <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer">
+                                    <span class="text-xs font-bold">G</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Copyright Strip -->
+        <div class="bg-yellow-500 text-black py-3">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center text-sm">
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:underline">Disclaimer</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Accessibility</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Contact us</a>
+                    </div>
+                    <div>© 2024 Achievers University, Owo</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    const menuBar = document.getElementById('menuBar');
+    const navBar = document.getElementById('navBar');
+    const xRegular = document.getElementById('xBar');
+    const faqs = document.querySelectorAll(".faq");
+
+    menuBar.addEventListener("click", function () {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    xRegular.addEventListener("click", function() {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    function handleApply() {
+        window.location.href = '/degree-programme';
+    }
+    </script>
+</body>
+</html>

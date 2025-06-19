@@ -1,0 +1,557 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievers University - Admission List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            // Admission data
+            const admissionData = {
+                accounting: [
+                    { admissionNo: "2400515", lastName: "ADEKANBI", firstName: "ESTHER", otherName: "OLUWAFUNMILOLA", programme: "Accounting" },
+                    { admissionNo: "2400373", lastName: "OZEGBE", firstName: "SHARON", otherName: "NKECHINYERE", programme: "Accounting" },
+                    { admissionNo: "2400278", lastName: "ONOVAE", firstName: "GRACE", otherName: "EGUONO", programme: "Accounting" },
+                    { admissionNo: "2400858", lastName: "CHIAZOR", firstName: "EMMANUEL", otherName: "CHIDUBEM", programme: "Accounting" },
+                    { admissionNo: "2400286", lastName: "AKOJI-EKEYI", firstName: "ILO-OJO", otherName: "GREAT", programme: "Accounting" },
+                ],
+                computerScience: [
+                    { admissionNo: "2400194", lastName: "EZE", firstName: "CHISOM", otherName: "HYGINUS", programme: "Computer Science" },
+                    { admissionNo: "2400156", lastName: "OKAFOR", firstName: "JAMES", otherName: "CHUKWUEMEKA", programme: "Computer Science" },
+                    { admissionNo: "2400298", lastName: "ADEBAYO", firstName: "FUNMI", otherName: "GRACE", programme: "Computer Science" },
+                ],
+                biochemistry: [
+                    { admissionNo: "2400445", lastName: "IBRAHIM", firstName: "FATIMA", otherName: "AISHA", programme: "Biochemistry" },
+                    { admissionNo: "2400332", lastName: "JOHNSON", firstName: "PETER", otherName: "EMEKA", programme: "Biochemistry" },
+                ],
+            };
+
+            // Form handling
+            const form = document.getElementById('newsletter-form');
+            const firstNameInput = document.getElementById('firstName');
+            const lastNameInput = document.getElementById('lastName');
+            const emailInput = document.getElementById('email');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = {
+                    firstName: firstNameInput.value,
+                    lastName: lastNameInput.value,
+                    email: emailInput.value,
+                };
+                console.log("Newsletter subscription:", formData);
+                // Reset form
+                form.reset();
+            });
+
+            // Toggle programme sections
+            let expandedProgramme = 'accounting';
+            const toggleButtons = document.querySelectorAll('.programme-toggle');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const programmeId = button.dataset.programme;
+                    const content = document.getElementById(`programme-content-${programmeId}`);
+                    const toggleIcon = button.querySelector('.toggle-icon');
+
+                    if (expandedProgramme === programmeId) {
+                        content.classList.add('hidden');
+                        toggleIcon.textContent = '+';
+                        expandedProgramme = '';
+                    } else {
+                        document.querySelectorAll('.programme-content').forEach(c => c.classList.add('hidden'));
+                        document.querySelectorAll('.toggle-icon').forEach(i => i.textContent = '+');
+                        content.classList.remove('hidden');
+                        toggleIcon.textContent = '−';
+                        expandedProgramme = programmeId;
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+
+        #xBar {
+            display: none;
+        }
+
+        #menuBar.active {
+            display: none;
+        }
+
+        #navBar.active {
+            display: flex;
+        }
+
+        #xBar.active {
+            display: flex;
+        }
+
+  </style>
+</head>
+<body class="min-h-screen bg-white font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo and University Name -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 flex items-center justify-center">
+                        <img src="{% static './assets/achieverslogo.png' %}" />
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">ACHIEVERS</h1>
+                        <h2 class="text-xl font-bold text-gray-800">UNIVERSITY</h2>
+                    </div>
+                </div>
+                <!-- Top Right Links -->
+                <div class="hidden lg:flex items-center space-x-6 text-sm">
+                    <span>Information For</span>
+                    <span>Virtual Tour</span>
+                    <span>A - Z</span>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs">ENHANCED BY</span>
+                        <span class="font-bold">Google</span>
+                        <input type="search" placeholder="Search..." class="w-32 h-8 border border-gray-300 rounded px-2">
+                    </div>
+                </div>
+
+                <img class="w-[40px] lg:hidden" id="menuBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-menu_ew07ve.svg" alt="" />
+                <img class="w-[40px] lg:hidden" id="xBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-x_tfiznr.svg" alt="" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white lg:bg-green-600 hidden lg:block " id="navBar">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-centre justify-center items-center lg:space-x-8 py-3">
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
+                <a href="" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BROCHURE</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gradient-to-r from-yellow-500 to-green-600 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-white">
+                <i data-lucide="home" class="w-4 h-4"></i>
+                <span>Admission</span>
+                <i data-lucide="chevron-down" class="w-4 h-4 rotate-[-90deg]"></i>
+                <span class="font-semibold">2024/2025 Admission List</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid lg:grid-cols-4 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-3">
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-2">2024/2025 PROVISIONAL OFFER LIST - BATCH 1</h1>
+                    <p class="text-red-600 font-medium">Please note that this offer is subject to JAMB ratification</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Accounting -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="programme-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-programme="accounting">
+                            <span class="text-lg font-semibold">ACCOUNTING</span>
+                            <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">−</div>
+                        </button>
+                        <div id="programme-content-accounting" class="programme-content bg-white">
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead class="bg-green-100">
+                                        <tr>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">ADMISSION NO</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">LASTNAME</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">FIRSTNAME</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">OTHERNAME</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">PROGRAMME</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-gray-50">
+                                            <td class="px-4 py-3 text-sm">2400515</td>
+                                            <td class="px-4 py-3 text-sm font-medium">ADEKANBI</td>
+                                            <td class="px-4 py-3 text-sm">ESTHER</td>
+                                            <td class="px-4 py-3 text-sm">OLUWAFUNMILOLA</td>
+                                            <td class="px-4 py-3 text-sm">Accounting</td>
+                                        </tr>
+                                        <tr class="bg-white">
+                                            <td class="px-4 py-3 text-sm">2400373</td>
+                                            <td class="px-4 py-3 text-sm font-medium">OZEGBE</td>
+                                            <td class="px-4 py-3 text-sm">SHARON</td>
+                                            <td class="px-4 py-3 text-sm">NKECHINYERE</td>
+                                            <td class="px-4 py-3 text-sm">Accounting</td>
+                                        </tr>
+                                        <tr class="bg-gray-50">
+                                            <td class="px-4 py-3 text-sm">2400278</td>
+                                            <td class="px-4 py-3 text-sm font-medium">ONOVAE</td>
+                                            <td class="px-4 py-3 text-sm">GRACE</td>
+                                            <td class="px-4 py-3 text-sm">EGUONO</td>
+                                            <td class="px-4 py-3 text-sm">Accounting</td>
+                                        </tr>
+                                        <tr class="bg-white">
+                                            <td class="px-4 py-3 text-sm">2400858</td>
+                                            <td class="px-4 py-3 text-sm font-medium">CHIAZOR</td>
+                                            <td class="px-4 py-3 text-sm">EMMANUEL</td>
+                                            <td class="px-4 py-3 text-sm">CHIDUBEM</td>
+                                            <td class="px-4 py-3 text-sm">Accounting</td>
+                                        </tr>
+                                        <tr class="bg-gray-50">
+                                            <td class="px-4 py-3 text-sm">2400286</td>
+                                            <td class="px-4 py-3 text-sm font-medium">AKOJI-EKEYI</td>
+                                            <td class="px-4 py-3 text-sm">ILO-OJO</td>
+                                            <td class="px-4 py-3 text-sm">GREAT</td>
+                                            <td class="px-4 py-3 text-sm">Accounting</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agricultural Economics -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="programme-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-programme="agricultural-economics">
+                            <span class="text-lg font-semibold">AGRICULTURAL ECONOMICS</span>
+                            <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
+                        </button>
+                        <div id="programme-content-agricultural-economics" class="programme-content hidden bg-white"></div>
+                    </div>
+
+                    <!-- Agricultural Engineering -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="programme-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-programme="agricultural-engineering">
+                            <span class="text-lg font-semibold">AGRICULTURAL ENGINEERING</span>
+                            <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
+                        </button>
+                        <div id="programme-content-agricultural-engineering" class="programme-content hidden bg-white"></div>
+                    </div>
+
+                    <!-- Animal Science -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="programme-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-programme="animal-science">
+                            <span class="text-lg font-semibold">ANIMAL SCIENCE</span>
+                            <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
+                        </button>
+                        <div id="programme-content-animal-science" class="programme-content hidden bg-white"></div>
+                    </div>
+
+                    <!-- Biochemistry -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="programme-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-programme="biochemistry">
+                            <span class="text-lg font-semibold">BIOCHEMISTRY</span>
+                            <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
+                        </button>
+                        <div id="programme-content-biochemistry" class="programme-content hidden bg-white">
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead class="bg-green-100">
+                                        <tr>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">ADMISSION NO</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">LASTNAME</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">FIRSTNAME</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">OTHERNAME</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">PROGRAMME</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-gray-50">
+                                            <td class="px-4 py-3 text-sm">2400445</td>
+                                            <td class="px-4 py-3 text-sm font-medium">IBRAHIM</td>
+                                            <td class="px-4 py-3 text-sm">FATIMA</td>
+                                            <td class="px-4 py-3 text-sm">AISHA</td>
+                                            <td class="px-4 py-3 text-sm">Biochemistry</td>
+                                        </tr>
+                                        <tr class="bg-white">
+                                            <td class="px-4 py-3 text-sm">2400332</td>
+                                            <td class="px-4 py-3 text-sm font-medium">JOHNSON</td>
+                                            <td class="px-4 py-3 text-sm">PETER</td>
+                                            <td class="px-4 py-3 text-sm">EMEKA</td>
+                                            <td class="px-4 py-3 text-sm">Biochemistry</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Administration -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="programme-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-programme="business-administration">
+                            <span class="text-lg font-semibold">BUSINESS ADMINISTRATION</span>
+                            <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
+                        </button>
+                        <div id="programme-content-business-administration" class="programme-content hidden bg-white"></div>
+                    </div>
+
+                    <!-- Computer Science -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="programme-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-programme="computer-science">
+                            <span class="text-lg font-semibold">COMPUTER SCIENCE</span>
+                            <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
+                        </button>
+                        <div id="programme-content-computer-science" class="programme-content hidden bg-white">
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <thead class="bg-green-100">
+                                        <tr>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">ADMISSION NO</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">LASTNAME</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">FIRSTNAME</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">OTHERNAME</th>
+                                            <th class="px-4 py-3 text-left font-semibold text-gray-800">PROGRAMME</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-gray-50">
+                                            <td class="px-4 py-3 text-sm">2400194</td>
+                                            <td class="px-4 py-3 text-sm font-medium">EZE</td>
+                                            <td class="px-4 py-3 text-sm">CHISOM</td>
+                                            <td class="px-4 py-3 text-sm">HYGINUS</td>
+                                            <td class="px-4 py-3 text-sm">Computer Science</td>
+                                        </tr>
+                                        <tr class="bg-white">
+                                            <td class="px-4 py-3 text-sm">2400156</td>
+                                            <td class="px-4 py-3 text-sm font-medium">OKAFOR</td>
+                                            <td class="px-4 py-3 text-sm">JAMES</td>
+                                            <td class="px-4 py-3 text-sm">CHUKWUEMEKA</td>
+                                            <td class="px-4 py-3 text-sm">Computer Science</td>
+                                        </tr>
+                                        <tr class="bg-gray-50">
+                                            <td class="px-4 py-3 text-sm">2400298</td>
+                                            <td class="px-4 py-3 text-sm font-medium">ADEBAYO</td>
+                                            <td class="px-4 py-3 text-sm">FUNMI</td>
+                                            <td class="px-4 py-3 text-sm">GRACE</td>
+                                            <td class="px-4 py-3 text-sm">Computer Science</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Civil Engineering -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="programme-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-programme="civil-engineering">
+                            <span class="text-lg font-semibold">CIVIL ENGINEERING</span>
+                            <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
+                        </button>
+                        <div id="programme-content-civil-engineering" class="programme-content hidden bg-white"></div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="mt-8 bg-white shadow rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-green-600 mb-4">Contact Us</h3>
+                    <div class="space-y-2 text-sm">
+                        <p><span class="font-medium">Email:</span> <a href="mailto:admissions@achievers.edu.ng" class="text-blue-600 hover:underline">admissions@achievers.edu.ng</a></p>
+                        <p><span class="font-medium">Website:</span> <a href="https://www.achievers.edu.ng" class="text-blue-600 hover:underline">www.achievers.edu.ng</a> and <a href="https://www.admission.achievers.edu.ng" class="text-blue-600 hover:underline">www.admission.achievers.edu.ng</a></p>
+                    </div>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-sm text-gray-600">Was this Content helpful?</span>
+                        <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">Yes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Newsletter Subscription -->
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-red-600 mb-4">SUBSCRIBE TO OUR NEWSLETTER</h3>
+                    <p class="text-sm text-gray-600 mb-4">Get the latest news and updates by signing up to our daily newsletter.</p>
+                    <div id="newsletter-form" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-3">
+                            <input id="firstName" type="text" placeholder="First Name" class="text-sm border border-gray-300 rounded px-2 py-1">
+                            <input id="lastName" type="text" placeholder="Last Name" class="text-sm border border-gray-300 rounded px-2 py-1">
+                        </div>
+                        <input id="email" type="email" placeholder="enter your Email Address" class="text-sm border border-gray-300 rounded px-2 py-1 w-full">
+                        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-4 right-4">
+        <div class="bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg">
+            <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-sm font-semibold">Online</span>
+            </div>
+            <p class="text-xs mt-1">
+                Welcome to our site. If you need help<br>
+                simply reply to this message, we are<br>
+                online and ready to help.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white">
+        <div class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-5 gap-8">
+                    <!-- Information About -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION ABOUT</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">The university</a></li>
+                            <li><a href="#" class="hover:underline">Fees & Funding</a></li>
+                            <li><a href="#" class="hover:underline">Libraries</a></li>
+                            <li><a href="#" class="hover:underline">Sport @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Health Care @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Students Affairs</a></li>
+                        </ul>
+                    </div>
+                    <!-- Information For -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION FOR</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Prospective Students</a></li>
+                            <li><a href="#" class="hover:underline">Current Students</a></li>
+                            <li><a href="#" class="hover:underline">Parents & Guardians</a></li>
+                            <li><a href="#" class="hover:underline">Current Staff</a></li>
+                            <li><a href="#" class="hover:underline">Visitors & Tourist</a></li>
+                            <li><a href="#" class="hover:underline">Alumni</a></li>
+                        </ul>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Contact us</a></li>
+                            <li><a href="#" class="hover:underline">Job & vacancies</a></li>
+                            <li><a href="#" class="hover:underline">Media</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reaching Us -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">REACHING US</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <p>Km 4, Owo-Benin Road,</p>
+                                    <p>PMB 1010, Owo Road</p>
+                                    <p>Owo, Ondo State</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-2 h-3 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <div>
+                                    <p>8 A.M. - 5 P.M.</p>
+                                    <p>+234 8168064525</p>
+                                    <p>+234 7038505649</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-3 h-2 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <p>admissions@achievers.edu.ng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Community -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">SOCIAL COMMUNITY</h3>
+                        <div class="space-y-3">
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
+                                    <span class="text-xs font-bold">f</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
+                                    <span class="text-xs font-bold">t</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
+                                    <span class="text-xs font-bold">▶</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                                <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer">
+                                    <span class="text-xs font-bold">G</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Copyright Strip -->
+        <div class="bg-yellow-500 text-black py-3">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center text-sm">
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:underline">Disclaimer</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Accessibility</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Contact us</a>
+                    </div>
+                    <div>© 2024 Achievers University, Owo</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    const menuBar = document.getElementById('menuBar');
+    const navBar = document.getElementById('navBar');
+    const xRegular = document.getElementById('xBar');
+    const faqs = document.querySelectorAll(".faq");
+
+    menuBar.addEventListener("click", function () {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    xRegular.addEventListener("click", function() {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    function handleApply() {
+        window.location.href = '/degree-programme';
+    }
+    </script>
+</body>
+</html>
