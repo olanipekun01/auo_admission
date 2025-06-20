@@ -48,3 +48,12 @@ def AdmissionList(request):
 
 def ApplicationInstruction(request):
     return render(request, 'application_instructor.html')
+
+def Booking(request):
+    return render(request, 'booking.html')
+
+def OurPolicy(request):
+    return render(request, 'our-policy.html')
+
+def Faq(request):
+    return render(request, 'faq.html')

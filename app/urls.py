@@ -24,6 +24,9 @@ urlpatterns = [
     path('degree-programme/', views.DegreeProgramme, name="degree_programme"),
     path('admission-list/', views.AdmissionList, name="admission_list"),
     path('application-instruction/', views.ApplicationInstruction, name="application_list"),
+    path('booking/', views.Booking, name="booking"),
+    path('our-policy/', views.OurPolicy, name="our_policy"),
+    path('faq/', views.Faq, name="faq"),
 ]
 
 if settings.DEBUG:

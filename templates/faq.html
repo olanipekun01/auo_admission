@@ -1,0 +1,491 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievers University - FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            // FAQ toggle functionality
+            let expandedFAQ = 'application-fee';
+            const faqButtons = document.querySelectorAll('.faq-toggle');
+            const faqContents = document.querySelectorAll('.faq-content');
+
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const faqId = button.getAttribute('data-faq-id');
+                    if (expandedFAQ === faqId) {
+                        // Collapse if already expanded
+                        expandedFAQ = '';
+                        document.getElementById(`faq-content-${faqId}`).classList.add('hidden');
+                        button.querySelector('.toggle-icon').innerHTML = '<i data-lucide="plus" class="w-4 h-4"></i>';
+                        lucide.createIcons();
+                    } else {
+                        // Collapse previously expanded FAQ
+                        if (expandedFAQ) {
+                            document.getElementById(`faq-content-${expandedFAQ}`).classList.add('hidden');
+                            document.querySelector(`[data-faq-id="${expandedFAQ}"] .toggle-icon`).innerHTML = '<i data-lucide="plus" class="w-4 h-4"></i>';
+                            lucide.createIcons();
+                        }
+                        // Expand new FAQ
+                        expandedFAQ = faqId;
+                        document.getElementById(`faq-content-${faqId}`).classList.remove('hidden');
+                        button.querySelector('.toggle-icon').innerHTML = '<i data-lucide="minus" class="w-4 h-4"></i>';
+                        lucide.createIcons();
+                    }
+                });
+            });
+        });
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+
+        #xBar {
+            display: none;
+        }
+
+        #menuBar.active {
+            display: none;
+        }
+
+        #navBar.active {
+            display: flex;
+        }
+
+        #xBar.active {
+            display: flex;
+        }
+
+  </style>
+</head>
+<body class="min-h-screen bg-white font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo and University Name -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 flex items-center justify-center">
+                        <img src="{% static './assets/achieverslogo.png' %}" />
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">ACHIEVERS</h1>
+                        <h2 class="text-xl font-bold text-gray-800">UNIVERSITY</h2>
+                    </div>
+                </div>
+                <!-- Top Right Links -->
+                <div class="hidden lg:flex items-center space-x-6 text-sm">
+                    <span>Information For</span>
+                    <span>Virtual Tour</span>
+                    <span>A - Z</span>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs">ENHANCED BY</span>
+                        <span class="font-bold">Google</span>
+                        <input type="search" placeholder="Search..." class="w-32 h-8 border border-gray-300 rounded px-2">
+                    </div>
+                </div>
+
+                <img class="w-[40px] lg:hidden" id="menuBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-menu_ew07ve.svg" alt="" />
+                <img class="w-[40px] lg:hidden" id="xBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-x_tfiznr.svg" alt="" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white lg:bg-green-600 hidden lg:block " id="navBar">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-centre justify-center items-center lg:space-x-8 py-3">
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
+                <a href="" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BROCHURE</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-3 space-y-8">
+                <!-- Core Values Banner -->
+                <div class="bg-white shadow rounded-lg">
+                    <div class="bg-green-100 rounded-lg p-6 relative">
+                        {% comment %} <div class="absolute top-4 right-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-blue-500 rounded-full flex items-center justify-center">
+                                <div class="text-white text-xs font-bold text-center">CORE<br>VALUES</div>
+                            </div>
+                        </div> {% endcomment %}
+                        <h3 class="text-xl font-bold text-green-800 mb-4">CORE VALUES</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            As our guiding philosophy, the Achievers experience is anchored on Seven (7) Core values which are:
+                            Spirituality, Possibility mentality, Capacity Building, Integrity, Responsibility, Diligence and
+                            sacrifice.
+                        </p>
+                        <div class="text-green-800 font-bold">#ACHIEVERS UNIVERSITY</div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h1>
+
+                    <div class="space-y-4">
+                        <!-- FAQ 1 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="jamb-application">
+                                <span class="font-medium text-sm md:text-base">Can someone who did not pick Achievers University in JAMB apply?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-jamb-application" class="faq-content bg-white p-6 hidden">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> Yes, candidates who did not choose Achievers University in their JAMB application can still apply for admission. The university accepts applications from all qualified candidates regardless of their initial JAMB choice.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="start-application">
+                                <span class="font-medium text-sm md:text-base">How do I start my application?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-start-application" class="faq-content bg-white p-6 hidden">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> To start your application, visit our admission portal at <a href="http://admission.achievers.edu.ng/app" class="text-blue-600 hover:underline">http://admission.achievers.edu.ng/app</a> and complete the application payment form. You will need your JAMB registration number, valid email address, and phone number to begin the process.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="credentials-upload">
+                                <span class="font-medium text-sm md:text-base">What credentials am I expected to upload?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-credentials-upload" class="faq-content bg-white p-6 hidden">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> You are required to upload: O'Level results (WAEC/NECO/NABTEB), JAMB result slip, birth certificate, state of origin certificate, passport photographs, and any other relevant academic certificates. All documents should be in PDF, JPG, or PNG format.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="programme-requirements">
+                                <span class="font-medium text-sm md:text-base">What are the programme requirements in Achievers University?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-programme-requirements" class="faq-content bg-white p-6 hidden">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> Programme requirements vary by course. Generally, you need 5 O'Level credits including English Language and Mathematics, plus specific subject requirements for your chosen programme. Check our degree programmes page for detailed requirements for each course.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="device-browser">
+                                <span class="font-medium text-sm md:text-base">What device and web browser can I use to apply?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-device-browser" class="faq-content bg-white p-6 hidden">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> You can use any modern device (computer, tablet, or smartphone) with an internet connection. Supported browsers include Chrome, Firefox, Safari, and Edge. Ensure your browser is updated to the latest version for the best experience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="application-fee">
+                                <span class="font-medium text-sm md:text-base">How much is the application form?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="minus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-application-fee" class="faq-content bg-white p-6">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> ₦12,000 or $30
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 7 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="after-admission">
+                                <span class="font-medium text-sm md:text-base">What happens after admission?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-after-admission" class="faq-content bg-white p-6 hidden">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> After receiving your admission letter, you will need to accept the offer, pay acceptance fees, complete registration, and attend orientation. You will receive detailed instructions via email and SMS about the next steps in the admission process.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 8 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="payment-methods">
+                                <span class="font-medium text-sm md:text-base">What payment methods are accepted?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-payment-methods" class="faq-content bg-white p-6 hidden">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> We accept payments via ATM cards (Verve, Visa, MasterCard), bank transfers, and online banking. International students can pay using international cards or wire transfers.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 9 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="application-deadline">
+                                <span class="font-medium text-sm md:text-base">What is the application deadline?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-application-deadline" class="faq-content bg-white p-6 hidden">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> Application deadlines vary by session. For the 2024/2025 academic session, applications close on August 31st, 2024. However, we encourage early application as admission is competitive.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 10 -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="faq-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors text-left" data-faq-id="admission-requirements">
+                                <span class="font-medium text-sm md:text-base">What are the minimum admission requirements?</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center">
+                                    <i data-lucide="plus" class="w-4 h-4"></i>
+                                </div>
+                            </button>
+                            <div id="faq-content-admission-requirements" class="faq-content bg-white p-6 hidden">
+                                <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Answer:</strong> Minimum requirements include 5 O'Level credits at not more than 2 sittings, including English Language and Mathematics, plus a valid JAMB score. Additional requirements may apply for specific programmes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact for More Questions -->
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <h2 class="text-lg md:text-xl font-bold text-blue-800 mb-4">Still Have Questions?</h2>
+                    <p class="text-blue-700 leading-relaxed mb-4 text-sm md:text-base">
+                        If you couldn't find the answer to your question, please don't hesitate to contact us. Our admissions
+                        team is ready to help you.
+                    </p>
+                    <div class="space-y-2 text-blue-700 text-sm md:text-base">
+                        <p><strong>Email:</strong> <a href="mailto:admissions@achievers.edu.ng" class="hover:underline">admissions@achievers.edu.ng</a></p>
+                        <p><strong>Phone:</strong> +234 8168064525, +234 7038505649</p>
+                        <p><strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-1">
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DEPARTURE PHILOSOPHY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">ADMISSION POLICY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">REQUIREMENTS</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">APPLICATION INSTRUCTION</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DEGREE PROGRAMMES</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">INTERNATIONAL STUDENT COMMUNITY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">GIVEN ADMISSION - WHAT NEXT?</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">HOW TO MAKE SCHOOL FEES AND ACCEPTANCE FEES PAYMENT</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">VISIT ACHIEVERS UNIVERSITY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">PROHIBITED ITEMS</button>
+                <button class="w-full text-left text-green-600 bg-green-50 px-4 py-3 rounded text-sm md:text-base">FAQ</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">STUDENT HANDBOOK</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DISCLAIMER</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-4 right-4">
+        <div class="bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg">
+            <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-sm font-semibold">Online</span>
+            </div>
+            <p class="text-xs mt-1">
+                Welcome to our site. If you need help<br>
+                simply reply to this message, we are<br>
+                online and ready to help.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white">
+        <div class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-5 gap-8">
+                    <!-- Information About -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION ABOUT</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">The university</a></li>
+                            <li><a href="#" class="hover:underline">Fees & Funding</a></li>
+                            <li><a href="#" class="hover:underline">Libraries</a></li>
+                            <li><a href="#" class="hover:underline">Sport @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Health Care @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Students Affairs</a></li>
+                        </ul>
+                    </div>
+                    <!-- Information For -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION FOR</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Prospective Students</a></li>
+                            <li><a href="#" class="hover:underline">Current Students</a></li>
+                            <li><a href="#" class="hover:underline">Parents & Guardians</a></li>
+                            <li><a href="#" class="hover:underline">Current Staff</a></li>
+                            <li><a href="#" class="hover:underline">Visitors & Tourist</a></li>
+                            <li><a href="#" class="hover:underline">Alumni</a></li>
+                        </ul>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Contact us</a></li>
+                            <li><a href="#" class="hover:underline">Job & vacancies</a></li>
+                            <li><a href="#" class="hover:underline">Media</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reaching Us -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">REACHING US</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <p>Km 4, Owo-Benin Road,</p>
+                                    <p>PMB 1010, Owo Road</p>
+                                    <p>Owo, Ondo State</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-2 h-3 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <div>
+                                    <p>8 A.M. - 5 P.M.</p>
+                                    <p>+234 8168064525</p>
+                                    <p>+234 7038505649</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-3 h-2 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <p>admissions@achievers.edu.ng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Community -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">SOCIAL COMMUNITY</h3>
+                        <div class="space-y-3">
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
+                                    <span class="text-xs font-bold">f</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
+                                    <span class="text-xs font-bold">t</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
+                                    <span class="text-xs font-bold">▶</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                                <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer">
+                                    <span class="text-xs font-bold">G</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Copyright Strip -->
+        <div class="bg-yellow-500 text-black py-3">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center text-sm">
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:underline">Disclaimer</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Accessibility</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Contact us</a>
+                    </div>
+                    <div>© 2024 Achievers University, Owo</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    const menuBar = document.getElementById('menuBar');
+    const navBar = document.getElementById('navBar');
+    const xRegular = document.getElementById('xBar');
+    const faqs = document.querySelectorAll(".faq");
+
+    menuBar.addEventListener("click", function () {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    xRegular.addEventListener("click", function() {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    function handleApply() {
+        window.location.href = '/degree-programme';
+    }
+    </script>
+</body>
+</html>
