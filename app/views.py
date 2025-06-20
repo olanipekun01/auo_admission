@@ -57,3 +57,15 @@ def OurPolicy(request):
 
 def Faq(request):
     return render(request, 'faq.html')
+
+def VisitUniversity(request):
+    return render(request, 'visit-university.html')
+
+def Requirements(request):
+    return render(request, 'requirements.html')
+
+def ProhibitedItems(request):
+    return render(request, 'prohibited-items.html')
+
+def Disclaimer(request):
+    return render(request, 'disclaimer.html')

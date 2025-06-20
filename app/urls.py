@@ -27,6 +27,10 @@ urlpatterns = [
     path('booking/', views.Booking, name="booking"),
     path('our-policy/', views.OurPolicy, name="our_policy"),
     path('faq/', views.Faq, name="faq"),
+    path('visit-university/', views.VisitUniversity, name="visit_university"),
+    path('requirements/', views.Requirements, name="requirements"),
+    path('disclaimer/', views.Disclaimer, name="disclaimer"),
+    path('prohibited-items/', views.ProhibitedItems, name="prohibited_items"),
 ]
 
 if settings.DEBUG:

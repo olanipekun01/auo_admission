@@ -1,0 +1,455 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievers University - Visit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+     <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+
+        #xBar {
+            display: none;
+        }
+
+        #menuBar.active {
+            display: none;
+        }
+
+        #navBar.active {
+            display: flex;
+        }
+
+        #xBar.active {
+            display: flex;
+        }
+
+  </style>
+</head>
+<body class="min-h-screen bg-white font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo and University Name -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 flex items-center justify-center">
+                        <img src="{% static './assets/achieverslogo.png' %}" />
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">ACHIEVERS</h1>
+                        <h2 class="text-xl font-bold text-gray-800">UNIVERSITY</h2>
+                    </div>
+                </div>
+                <!-- Top Right Links -->
+                <div class="hidden lg:flex items-center space-x-6 text-sm">
+                    <span>Information For</span>
+                    <span>Virtual Tour</span>
+                    <span>A - Z</span>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs">ENHANCED BY</span>
+                        <span class="font-bold">Google</span>
+                        <input type="search" placeholder="Search..." class="w-32 h-8 border border-gray-300 rounded px-2">
+                    </div>
+                </div>
+
+                <img class="w-[40px] lg:hidden" id="menuBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-menu_ew07ve.svg" alt="" />
+                <img class="w-[40px] lg:hidden" id="xBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-x_tfiznr.svg" alt="" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white lg:bg-green-600 hidden lg:block " id="navBar">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-centre justify-center items-center lg:space-x-8 py-3">
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
+                <a href="" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BROCHURE</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-3 space-y-8">
+                <!-- Visit University Section -->
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">VISIT ACHIEVERS UNIVERSITY</h1>
+
+                    <!-- Map Section -->
+                    <div class="bg-white shadow rounded-lg mb-8">
+                        <div class="p-4 border-b">
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <h3 class="font-bold text-lg">Achievers University</h3>
+                                    <p class="text-sm text-gray-600">Owo-Benin Road, Owo, Ondo State, Nigeria</p>
+                                    <div class="flex items-center mt-2">
+                                        <div class="flex text-yellow-400">
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                            <i data-lucide="star" class="w-4 h-4"></i>
+                                        </div>
+                                        <span class="ml-2 text-sm text-blue-600">4.2 ★★★★☆ 289 reviews</span>
+                                    </div>
+                                </div>
+                                <button class="text-blue-600 border border-blue-600 px-3 py-1 rounded hover:bg-blue-50 text-sm">Directions</button>
+                            </div>
+                        </div>
+                        <div class="h-80 bg-green-100 relative overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.2!2d5.5861!3d7.1975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMTEnNTEuMCJOIDXCsDM1JzEwLjAiRQ!5e0!3m2!1sen!2sng!4v1"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="absolute inset-0"
+                            ></iframe>
+                            <div class="absolute bottom-4 left-4 bg-white px-2 py-1 rounded text-xs">
+                                <a href="#" class="text-blue-600 hover:underline">View larger map</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Welcome Message -->
+                    <div class="mb-8">
+                        <p class="text-gray-700 leading-relaxed text-sm md:text-lg">
+                            We welcome visitors/parents/prospective Students from all around the world to experience our
+                            harmonious, beautiful and serene environment. Achievers University is one of the finest and most
+                            magnificent Private University campuses in Nigeria today. Deep in the heart of peaceful town of Owo,
+                            Ondo State, presents an area of idyllic tranquility and enchanting scenery. We believe the tent
+                            elating purview of artistic output our campus presents would envelope you into a new realm practical
+                            demonstrations of 'our can do spirit'.
+                        </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white shadow rounded-lg p-6">
+                            <h2 class="text-lg md:text-xl font-bold text-gray-800 mb-4">Contact Information</h2>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-green-600 mt-1"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm md:text-base">Address</p>
+                                        <p class="text-gray-600 text-sm md:text-base">Km 4, Owo-Benin Road</p>
+                                        <p class="text-gray-600 text-sm md:text-base">P.M.B 1010</p>
+                                        <p class="text-gray-600 text-sm md:text-base">Owo, Ondo State</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="phone" class="w-5 h-5 text-green-600 mt-1"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm md:text-base">Phone Numbers</p>
+                                        <a href="tel:+2348168064525" class="text-green-600 hover:underline block text-sm md:text-base">(+234) 816 086 4525</a>
+                                        <a href="tel:+2347038205649" class="text-green-600 hover:underline block text-sm md:text-base">(+234) 703 820 5649</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="mail" class="w-5 h-5 text-green-600 mt-1"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm md:text-base">Email</p>
+                                        <a href="mailto:admissions@achievers.edu.ng" class="text-green-600 hover:underline text-sm md:text-base">admissions@achievers.edu.ng</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-green-600 mt-1"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm md:text-base">Office Hours</p>
+                                        <p class="text-gray-600 text-sm md:text-base">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                        <p class="text-gray-600 text-sm md:text-base">Saturday: 9:00 AM - 2:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white shadow rounded-lg p-6">
+                            <h2 class="text-lg md:text-xl font-bold text-gray-800 mb-4">Social Media</h2>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="font-semibold text-gray-800 mb-2 text-sm md:text-base">Twitter</p>
+                                    <a href="https://twitter.com/achieversadmiss2" class="text-blue-600 hover:underline text-sm md:text-base">@achieversadmiss2</a>
+                                </div>
+
+                                <div>
+                                    <p class="font-semibold text-gray-800 mb-2 text-sm md:text-base">Instagram</p>
+                                    <a href="https://instagram.com/AU_admissions" class="text-blue-600 hover:underline text-sm md:text-base">AU_admissions</a>
+                                </div>
+
+                                <div>
+                                    <p class="font-semibold text-gray-800 mb-2 text-sm md:text-base">Facebook</p>
+                                    <a href="https://facebook.com/achieversuniversity" class="text-blue-600 hover:underline text-sm md:text-base">Achievers University Official</a>
+                                </div>
+
+                                <div>
+                                    <p class="font-semibold text-gray-800 mb-2 text-sm md:text-base">YouTube</p>
+                                    <a href="https://youtube.com/achieversuniversity" class="text-blue-600 hover:underline text-sm md:text-base">Achievers University Channel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visiting Guidelines -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                        <h2 class="text-lg md:text-xl font-bold text-blue-800 mb-4">Visiting Guidelines</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-semibold text-blue-800 mb-2 text-sm md:text-base">Campus Tours</h3>
+                                <ul class="space-y-1 text-blue-700 text-xs md:text-sm">
+                                    <li>• Guided tours available Monday - Friday</li>
+                                    <li>• Tours start at 10:00 AM and 2:00 PM</li>
+                                    <li>• Duration: Approximately 2 hours</li>
+                                    <li>• Advance booking recommended</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-blue-800 mb-2 text-sm md:text-base">What to Bring</h3>
+                                <ul class="space-y-1 text-blue-700 text-xs md:text-sm">
+                                    <li>• Valid identification</li>
+                                    <li>• Comfortable walking shoes</li>
+                                    <li>• Camera (photography allowed)</li>
+                                    <li>• Questions for our tour guides</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transportation -->
+                    <div class="bg-white shadow rounded-lg p-6">
+                        <h2 class="text-lg md:text-xl font-bold text-gray-800 mb-4">Getting to Campus</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2 text-sm md:text-base">By Road</h3>
+                                <p class="text-gray-600 text-xs md:text-sm mb-2">
+                                    The university is easily accessible via the Owo-Benin Road. From Akure, take the Owo road and
+                                    continue for approximately 30 minutes.
+                                </p>
+                                <p class="text-gray-600 text-xs md:text-sm">
+                                    <strong>Distance from major cities:</strong>
+                                </p>
+                                <ul class="text-gray-600 text-xs md:text-sm mt-1">
+                                    <li>• Akure: 45 minutes</li>
+                                    <li>• Benin City: 2 hours</li>
+                                    <li>• Lagos: 4 hours</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-800 mb-2 text-sm md:text-base">Public Transportation</h3>
+                                <p class="text-gray-600 text-xs md:text-sm mb-2">
+                                    Regular bus services are available from major cities to Owo. From Owo town, take a taxi or
+                                    motorcycle to the university campus.
+                                </p>
+                                <p class="text-gray-600 text-xs md:text-sm">
+                                    <strong>Airport:</strong> Akure Airport (45 minutes drive)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-1">
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DEPARTURE PHILOSOPHY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">ADMISSION POLICY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">REQUIREMENTS</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">APPLICATION INSTRUCTION</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DEGREE PROGRAMMES</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">INTERNATIONAL STUDENT COMMUNITY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">GIVEN ADMISSION - WHAT NEXT?</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">HOW TO MAKE SCHOOL FEES AND ACCEPTANCE FEES PAYMENT</button>
+                <button class="w-full text-left text-green-600 bg-green-50 px-4 py-3 rounded text-sm md:text-base">VISIT ACHIEVERS UNIVERSITY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">PROHIBITED ITEMS</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">FAQ</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">STUDENT HANDBOOK</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DISCLAIMER</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-4 right-4">
+        <div class="bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg">
+            <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-sm font-semibold">Online</span>
+            </div>
+            <p class="text-xs mt-1">
+                Welcome to our site. If you need help<br>
+                simply reply to this message, we are<br>
+                online and ready to help.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white">
+        <div class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-5 gap-8">
+                    <!-- Information About -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION ABOUT</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">The university</a></li>
+                            <li><a href="#" class="hover:underline">Fees & Funding</a></li>
+                            <li><a href="#" class="hover:underline">Libraries</a></li>
+                            <li><a href="#" class="hover:underline">Sport @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Health Care @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Students Affairs</a></li>
+                        </ul>
+                    </div>
+                    <!-- Information For -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION FOR</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Prospective Students</a></li>
+                            <li><a href="#" class="hover:underline">Current Students</a></li>
+                            <li><a href="#" class="hover:underline">Parents & Guardians</a></li>
+                            <li><a href="#" class="hover:underline">Current Staff</a></li>
+                            <li><a href="#" class="hover:underline">Visitors & Tourist</a></li>
+                            <li><a href="#" class="hover:underline">Alumni</a></li>
+                        </ul>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Contact us</a></li>
+                            <li><a href="#" class="hover:underline">Job & vacancies</a></li>
+                            <li><a href="#" class="hover:underline">Media</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reaching Us -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">REACHING US</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <p>Km 4, Owo-Benin Road,</p>
+                                    <p>PMB 1010, Owo Road</p>
+                                    <p>Owo, Ondo State</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-2 h-3 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <div>
+                                    <p>8 A.M. - 5 P.M.</p>
+                                    <p>+234 8168064525</p>
+                                    <p>+234 7038505649</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-3 h-2 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <p>admissions@achievers.edu.ng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Community -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">SOCIAL COMMUNITY</h3>
+                        <div class="space-y-3">
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
+                                    <span class="text-xs font-bold">f</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
+                                    <span class="text-xs font-bold">t</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
+                                    <span class="text-xs font-bold">▶</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                                <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer">
+                                    <span class="text-xs font-bold">G</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Copyright Strip -->
+        <div class="bg-yellow-500 text-black py-3">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center text-sm">
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:underline">Disclaimer</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Accessibility</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Contact us</a>
+                    </div>
+                    <div>© 2024 Achievers University, Owo</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    const menuBar = document.getElementById('menuBar');
+    const navBar = document.getElementById('navBar');
+    const xRegular = document.getElementById('xBar');
+    const faqs = document.querySelectorAll(".faq");
+
+    menuBar.addEventListener("click", function () {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    xRegular.addEventListener("click", function() {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    function handleApply() {
+        window.location.href = '/degree-programme';
+    }
+    </script>
+</body>
+</html>

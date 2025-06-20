@@ -1,0 +1,420 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievers University - Disclaimer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+
+        #xBar {
+            display: none;
+        }
+
+        #menuBar.active {
+            display: none;
+        }
+
+        #navBar.active {
+            display: flex;
+        }
+
+        #xBar.active {
+            display: flex;
+        }
+
+  </style>
+</head>
+<body class="min-h-screen bg-white font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo and University Name -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 flex items-center justify-center">
+                        <img src="{% static './assets/achieverslogo.png' %}" />
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">ACHIEVERS</h1>
+                        <h2 class="text-xl font-bold text-gray-800">UNIVERSITY</h2>
+                    </div>
+                </div>
+                <!-- Top Right Links -->
+                <div class="hidden lg:flex items-center space-x-6 text-sm">
+                    <span>Information For</span>
+                    <span>Virtual Tour</span>
+                    <span>A - Z</span>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs">ENHANCED BY</span>
+                        <span class="font-bold">Google</span>
+                        <input type="search" placeholder="Search..." class="w-32 h-8 border border-gray-300 rounded px-2">
+                    </div>
+                </div>
+
+                <img class="w-[40px] lg:hidden" id="menuBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-menu_ew07ve.svg" alt="" />
+                <img class="w-[40px] lg:hidden" id="xBar" src="https://res.cloudinary.com/dztirmlfv/image/upload/v1738930587/bx-x_tfiznr.svg" alt="" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white lg:bg-green-600 hidden lg:block " id="navBar">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-centre justify-center items-center lg:space-x-8 py-3">
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
+                <a href="" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BROCHURE</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
+                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-3 space-y-8">
+                <!-- Core Values Banner -->
+                <div class="bg-white shadow rounded-lg">
+                    <div class="bg-green-100 rounded-lg p-6 relative">
+                        {% comment %} <div class="absolute top-4 right-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-blue-500 rounded-full flex items-center justify-center">
+                                <div class="text-white text-xs font-bold text-center">CORE<br>VALUES</div>
+                            </div>
+                        </div> {% endcomment %}
+                        <h3 class="text-xl font-bold text-green-800 mb-4">CORE VALUES</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
+                            As our guiding philosophy, the Achievers experience is anchored on Seven (7) Core values which are:
+                            Spirituality, Possibility mentality, Capacity Building, Integrity, Responsibility, Diligence and
+                            sacrifice.
+                        </p>
+                        <div class="text-green-800 font-bold">#ACHIEVERS UNIVERSITY</div>
+                    </div>
+                </div>
+
+                <!-- Disclaimer Content -->
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Disclaimer Clause</h1>
+
+                    <!-- Warning Alert -->
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="alert-triangle" class="w-6 h-6 text-red-600 mt-1"></i>
+                            <div>
+                                <h2 class="text-xl font-bold text-red-800 mb-4">Important Notice</h2>
+                                <p class="text-red-700 leading-relaxed text-sm md:text-base">
+                                    <strong>Achievers University</strong> does not have any agent or representative to process the
+                                    admission. The use of such agent is at candidates' own risk and they should desist from using
+                                    third party in processing their applications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-700 mb-8 leading-relaxed text-sm md:text-base">
+                        Accordingly, <strong>Achievers University</strong>:
+                    </p>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-red-600 mt-1 flex-shrink-0"></i>
+                            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                Does not outsource its admission exercise; make warranty, express or implied, regarding the
+                                accuracy, correctness, completeness resulting from the use of third party for the admission
+                                application process.
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-red-600 mt-1 flex-shrink-0"></i>
+                            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                Does not assume legal liability for the use of any such third party, money paid to such individual
+                                or its acts or its omissions committed as a result of the use of the third party.
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-red-600 mt-1 flex-shrink-0"></i>
+                            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                Recognizes only <strong>+234 816 086 4515</strong> and <strong>+234 703 820 5649</strong> as her
+                                admission contacts
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-red-600 mt-1 flex-shrink-0"></i>
+                            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                Recognizes only <strong>admissions@achievers.edu.ng</strong> as her admission email contact
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-red-600 mt-1 flex-shrink-0"></i>
+                            <p class="text-gray-700 leading-relaxed text-sm md:text-base">
+                                Recognizes only <a href="https://www.achievers.edu.ng" class="text-green-600 hover:underline font-medium">www.achievers.edu.ng</a> and <a href="https://www.admission.achievers.edu.ng" class="text-green-600 hover:underline font-medium">www.admission.achievers.edu.ng</a> as her official website
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Official Contact Information -->
+                <div class="bg-white shadow rounded-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Official Contact Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-green-600"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-800 text-sm md:text-base">Phone Numbers</p>
+                                    <p class="text-gray-600 text-sm md:text-base">+234 816 086 4515</p>
+                                    <p class="text-gray-600 text-sm md:text-base">+234 703 820 5649</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="mail" class="w-5 h-5 text-green-600"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-800 text-sm md:text-base">Email</p>
+                                    <a href="mailto:admissions@achievers.edu.ng" class="text-green-600 hover:underline text-sm md:text-base">admissions@achievers.edu.ng</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="globe" class="w-5 h-5 text-green-600"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-800 text-sm md:text-base">Official Websites</p>
+                                    <a href="https://www.achievers.edu.ng" class="text-green-600 hover:underline block text-sm md:text-base">www.achievers.edu.ng</a>
+                                    <a href="https://www.admission.achievers.edu.ng" class="text-green-600 hover:underline block text-sm md:text-base">www.admission.achievers.edu.ng</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Notice -->
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                    <h2 class="text-xl font-bold text-yellow-800 mb-4">Legal Notice</h2>
+                    <div class="space-y-3 text-yellow-700 text-sm md:text-base">
+                        <p class="leading-relaxed">
+                            Any individual or organization claiming to represent Achievers University in admission matters
+                            without official authorization is doing so fraudulently and will be prosecuted to the full extent of
+                            the law.
+                        </p>
+                        <p class="leading-relaxed">
+                            Prospective students are advised to verify all communications and transactions directly with the
+                            university through the official contact channels listed above.
+                        </p>
+                        <p class="leading-relaxed">
+                            The university reserves the right to take legal action against any unauthorized agents or
+                            representatives.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Reporting Fraud -->
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <h2 class="text-xl font-bold text-blue-800 mb-4">Report Fraudulent Activities</h2>
+                    <p class="text-blue-700 leading-relaxed mb-4 text-sm md:text-base">
+                        If you encounter anyone claiming to be an agent or representative of Achievers University, please
+                        report immediately to:
+                    </p>
+                    <div class="space-y-2 text-blue-700 text-sm md:text-base">
+                        <p><strong>Security Office:</strong> +234 816 086 4515</p>
+                        <p><strong>Admissions Office:</strong> +234 703 820 5649</p>
+                        <p><strong>Email:</strong> <a href="mailto:security@achievers.edu.ng" class="text-blue-600 hover:underline">security@achievers.edu.ng</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-1">
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DEPARTURE PHILOSOPHY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">ADMISSION POLICY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">REQUIREMENTS</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">APPLICATION INSTRUCTION</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DEGREE PROGRAMMES</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">INTERNATIONAL STUDENT COMMUNITY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">GIVEN ADMISSION - WHAT NEXT?</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">HOW TO MAKE SCHOOL FEES AND ACCEPTANCE FEES PAYMENT</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">VISIT ACHIEVERS UNIVERSITY</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">PROHIBITED ITEMS</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">FAQ</button>
+                <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">STUDENT HANDBOOK</button>
+                <button class="w-full text-left text-green-600 bg-green-50 px-4 py-3 rounded text-sm md:text-base">DISCLAIMER</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div class="fixed bottom-4 right-4">
+        <div class="bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg">
+            <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-sm font-semibold">Online</span>
+            </div>
+            <p class="text-xs mt-1">
+                Welcome to our site. If you need help<br>
+                simply reply to this message, we are<br>
+                online and ready to help.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white">
+        <div class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-5 gap-8">
+                    <!-- Information About -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION ABOUT</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">The university</a></li>
+                            <li><a href="#" class="hover:underline">Fees & Funding</a></li>
+                            <li><a href="#" class="hover:underline">Libraries</a></li>
+                            <li><a href="#" class="hover:underline">Sport @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Health Care @ AU</a></li>
+                            <li><a href="#" class="hover:underline">Students Affairs</a></li>
+                        </ul>
+                    </div>
+                    <!-- Information For -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">INFORMATION FOR</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Prospective Students</a></li>
+                            <li><a href="#" class="hover:underline">Current Students</a></li>
+                            <li><a href="#" class="hover:underline">Parents & Guardians</a></li>
+                            <li><a href="#" class="hover:underline">Current Staff</a></li>
+                            <li><a href="#" class="hover:underline">Visitors & Tourist</a></li>
+                            <li><a href="#" class="hover:underline">Alumni</a></li>
+                        </ul>
+                    </div>
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:underline">Contact us</a></li>
+                            <li><a href="#" class="hover:underline">Job & vacancies</a></li>
+                            <li><a href="#" class="hover:underline">Media</a></li>
+                        </ul>
+                    </div>
+                    <!-- Reaching Us -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">REACHING US</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <p>Km 4, Owo-Benin Road,</p>
+                                    <p>PMB 1010, Owo Road</p>
+                                    <p>Owo, Ondo State</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center mt-0.5">
+                                    <div class="w-2 h-3 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <div>
+                                    <p>8 A.M. - 5 P.M.</p>
+                                    <p>+234 8168064525</p>
+                                    <p>+234 7038505649</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                                    <div class="w-3 h-2 bg-green-600 rounded-sm"></div>
+                                </div>
+                                <p>admissions@achievers.edu.ng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social Community -->
+                    <div>
+                        <h3 class="font-bold text-lg mb-4">SOCIAL COMMUNITY</h3>
+                        <div class="space-y-3">
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
+                                    <span class="text-xs font-bold">f</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
+                                    <span class="text-xs font-bold">t</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                            </div>
+                            <div class="flex space-x-3">
+                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
+                                    <span class="text-xs font-bold">▶</span>
+                                </div>
+                                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
+                                    <span class="text-xs font-bold">in</span>
+                                </div>
+                                <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer">
+                                    <span class="text-xs font-bold">G</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Copyright Strip -->
+        <div class="bg-yellow-500 text-black py-3">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center text-sm">
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:underline">Disclaimer</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Accessibility</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Contact us</a>
+                    </div>
+                    <div>© 2024 Achievers University, Owo</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    const menuBar = document.getElementById('menuBar');
+    const navBar = document.getElementById('navBar');
+    const xRegular = document.getElementById('xBar');
+    const faqs = document.querySelectorAll(".faq");
+
+    menuBar.addEventListener("click", function () {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    xRegular.addEventListener("click", function() {
+        navBar.classList.toggle('active');
+        xRegular.classList.toggle('active');
+        menuBar.classList.toggle('active');
+    });
+
+    function handleApply() {
+        window.location.href = '/degree-programme';
+    }
+    </script>
+</body>
+</html>
