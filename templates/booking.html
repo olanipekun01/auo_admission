@@ -75,13 +75,13 @@
     <nav class="bg-white lg:bg-green-600 hidden lg:block " id="navBar">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-centre justify-center items-center lg:space-x-8 py-3">
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
-                <a href="" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
+                <a href="www.achievers.edu.ng" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
+                <a href="/" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
+                <a href="/degree-programme" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
+                <a href="/admission-list" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
                 <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BROCHURE</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
+                <a href="/our-policy" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
+                <a href="/booking" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
             </div>
         </div>
     </nav>
@@ -99,13 +99,13 @@
                                 <div class="text-white text-xs font-bold text-center">CORE<br>VALUES</div>
                             </div>
                         </div> {% endcomment %}
-                        <h3 class="text-xl font-bold text-green-800 mb-4">CORE VALUES</h3>
-                        <p class="text-gray-700 text-sm leading-relaxed mb-4">
-                            As our guiding philosophy, the Achievers experience is anchored on Seven (7) Core values which are:
-                            Spirituality, Possibility mentality, Capacity Building, Integrity, Responsibility, Diligence and
-                            sacrifice.
+                         <h3 class="text-xl font-bold text-green-800 mb-4">OUR MISSION</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">
+                            To provide the enabling environment – physically and academically – for the production
+                                of competent and quality graduates who would be self-reliant, highly productive 
+                                and globally relevant in every sphere of human endeavour.
                         </p>
-                        <div class="text-green-800 font-bold">#ACHIEVERS UNIVERSITY</div>
+                        <div class="mt-4 text-green-800 font-bold">#ACHIEVERS UNIVERSITY</div>
                     </div>
                 </div>
 
@@ -131,9 +131,11 @@
                                 <p class="text-gray-700 mb-6 leading-relaxed text-sm md:text-base">
                                     Our modern hostel facilities provide a safe and comfortable living environment for students. We
                                     offer both male and female hostels with 24/7 security, study areas, and recreational facilities.
+
+                                    The University recognizes the strategic importance of regular water and electricity supply to the achievement of its vision and objectives, and has, therefore, taken measures to facilitate same. It has functional standby generators, which are put in use when the public power supply fails. The University relies exclusively on boreholes and deep wells which pump water into overhead tanks that supply water to all parts of the campus. The long-term plan is to have a special line from the State Water Board dedicated to the University to facilitate standard comfort for the students.
                                 </p>
 
-                                <div class="space-y-4">
+                                {% comment %} <div class="space-y-4">
                                     <div class="flex items-center space-x-3">
                                         <i data-lucide="phone" class="w-5 h-5 text-green-600"></i>
                                         <div>
@@ -157,15 +159,15 @@
                                             <a href="mailto:accommodation@achievers.edu.ng" class="text-green-600 hover:underline text-sm md:text-base">accommodation@achievers.edu.ng</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> {% endcomment %}
 
                                 <div class="mt-6 p-4 bg-green-50 rounded-lg">
                                     <h3 class="font-bold text-green-800 mb-2 text-sm md:text-base">Accommodation Features:</h3>
                                     <ul class="text-sm text-green-700 space-y-1">
                                         <li>• Furnished rooms with study desks</li>
                                         <li>• 24/7 electricity and water supply</li>
-                                        <li>• High-speed internet access</li>
-                                        <li>• Common areas and kitchenettes</li>
+                                        {% comment %} <li>• High-speed internet access</li> {% endcomment %}
+                                        {% comment %} <li>• Common areas and kitchenettes</li> {% endcomment %}
                                         <li>• Laundry facilities</li>
                                     </ul>
                                 </div>
@@ -187,7 +189,7 @@
                                     locations in the city. Safe, reliable, and affordable transportation for your daily commute.
                                 </p>
 
-                                <div class="space-y-4">
+                                {% comment %} <div class="space-y-4">
                                     <div class="flex items-center space-x-3">
                                         <i data-lucide="phone" class="w-5 h-5 text-green-600"></i>
                                         <div>
@@ -219,16 +221,16 @@
                                             <a href="mailto:transport@achievers.edu.ng" class="text-green-600 hover:underline text-sm md:text-base">transport@achievers.edu.ng</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> {% endcomment %}
 
                                 <div class="mt-6 p-4 bg-blue-50 rounded-lg">
                                     <h3 class="font-bold text-blue-800 mb-2 text-sm md:text-base">Shuttle Routes:</h3>
                                     <ul class="text-sm text-blue-700 space-y-1">
                                         <li>• Campus to Owo Town Center</li>
-                                        <li>• Campus to Akure (weekends)</li>
-                                        <li>• Campus to Major Shopping Areas</li>
+                                        {% comment %} <li>• Campus to Akure (weekends)</li>
+                                        <li>• Campus to Major Shopping Areas</li> {% endcomment %}
                                         <li>• Special event transportation</li>
-                                        <li>• Airport pickup (on request)</li>
+                                        {% comment %} <li>• Airport pickup (on request)</li> {% endcomment %}
                                     </ul>
                                 </div>
                             </div>
@@ -240,7 +242,7 @@
                 <div>
                     <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-6">Additional Services</h2>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {% comment %} <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="bg-white shadow rounded-lg">
                             <div class="p-6 text-center">
                                 <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -273,7 +275,7 @@
                                 <p class="text-green-600 font-medium text-sm md:text-base">admissions@achievers.edu.ng</p>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
 
                 <!-- Booking Guidelines -->
@@ -302,19 +304,17 @@
 
             <!-- Sidebar -->
             <div class="space-y-1 flex flex-col">
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DEPARTURE PHILOSOPHY</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">ADMISSION POLICY</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">REQUIREMENTS</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">APPLICATION INSTRUCTION</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DEGREE PROGRAMMES</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">INTERNATIONAL STUDENT COMMUNITY</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">GIVEN ADMISSION - WHAT NEXT?</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">HOW TO MAKE SCHOOL FEES AND ACCEPTANCE FEES PAYMENT</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">VISIT ACHIEVERS UNIVERSITY</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">PROHIBITED ITEMS</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">FAQ</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">STUDENT HANDBOOK</a>
-                <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded text-sm md:text-base">DISCLAIMER</a>
+                <div class="space-y-2 flex flex-col">
+                    <a href="/our-policy" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">ADMISSION POLICY</a>
+                    <a href="/requirements" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">REQUIREMENTS</a>
+                    <a href="/application-instruction" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">APPLICATION INSTRUCTION</a>
+                    <a href="/degree-programme" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">DEGREE PROGRAMMES</a>
+                    <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">HOW TO MAKE SCHOOL FEES AND ACCEPTANCE FEES PAYMENT</a>
+                    <a href="/visit-university" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">VISIT ACHIEVERS UNIVERSITY</a>
+                    <a href="/faq" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">FAQ</a>
+                    <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">STUDENT HANDBOOK</a>
+                    <a href="/disclaimer" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">DISCLAIMER</a>
+                </div>
             </div>
         </div>
     </div>
@@ -343,33 +343,30 @@
                     <div>
                         <h3 class="font-bold text-lg mb-4">INFORMATION ABOUT</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:underline">The university</a></li>
-                            <li><a href="#" class="hover:underline">Fees & Funding</a></li>
-                            <li><a href="#" class="hover:underline">Libraries</a></li>
-                            <li><a href="#" class="hover:underline">Sport @ AU</a></li>
-                            <li><a href="#" class="hover:underline">Health Care @ AU</a></li>
-                            <li><a href="#" class="hover:underline">Students Affairs</a></li>
+                            <li><a href="www.achievers.edu.ng" class="hover:underline">The university</a></li>
+                            <li><a href="www.achievers.edu.ng/academics/undergraduate-fees" class="hover:underline">Fees & Funding</a></li>
+                            <li><a href="www.achievers.edu.ng/academics/library/" class="hover:underline">Libraries</a></li>
                         </ul>
                     </div>
                     <!-- Information For -->
                     <div>
                         <h3 class="font-bold text-lg mb-4">INFORMATION FOR</h3>
-                        <ul class="space-y-2 text-sm">
+                        {% comment %} <ul class="space-y-2 text-sm">
                             <li><a href="#" class="hover:underline">Prospective Students</a></li>
                             <li><a href="#" class="hover:underline">Current Students</a></li>
                             <li><a href="#" class="hover:underline">Parents & Guardians</a></li>
                             <li><a href="#" class="hover:underline">Current Staff</a></li>
                             <li><a href="#" class="hover:underline">Visitors & Tourist</a></li>
                             <li><a href="#" class="hover:underline">Alumni</a></li>
-                        </ul>
+                        </ul> {% endcomment %}
                     </div>
                     <!-- Quick Links -->
                     <div>
                         <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:underline">Contact us</a></li>
-                            <li><a href="#" class="hover:underline">Job & vacancies</a></li>
-                            <li><a href="#" class="hover:underline">Media</a></li>
+                            <li><a href="/contact" class="hover:underline">Contact us</a></li>
+                            <li><a href="/degree-programme" class="hover:underline">Degree Programme</a></li>
+                            <li><a href="/faq" class="hover:underline">FAQ</a></li>
                         </ul>
                     </div>
                     <!-- Reaching Us -->
@@ -392,8 +389,8 @@
                                 </div>
                                 <div>
                                     <p>8 A.M. - 5 P.M.</p>
-                                    <p>+234 8168064525</p>
-                                    <p>+234 7038505649</p>
+                                    <p>+234 8037062508</p>
+                                    <p>+234 8060266505</p>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-2">
@@ -409,23 +406,23 @@
                         <h3 class="font-bold text-lg mb-4">SOCIAL COMMUNITY</h3>
                         <div class="space-y-3">
                             <div class="flex space-x-3">
-                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
+                                <a href="https://web.facebook.com/AchieversUniversityOwoOnline/" class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
                                     <span class="text-xs font-bold">f</span>
-                                </div>
-                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
+                                </a>
+                                <a href="https://x.com/AchieversUni" class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
                                     <span class="text-xs font-bold">t</span>
-                                </div>
-                                <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
+                                </a>
+                                <a href="https://www.instagram.com/achieversuniversityowo/" class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
                                     <span class="text-xs font-bold">in</span>
-                                </div>
+                                </a>
                             </div>
                             <div class="flex space-x-3">
-                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
+                                <a href="https://www.youtube.com/@achieversuniversity-tv5616" class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
                                     <span class="text-xs font-bold">▶</span>
-                                </div>
-                                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
-                                    <span class="text-xs font-bold">in</span>
-                                </div>
+                                </a>
+                                <a href="https://www.linkedin.com/school/achievers-university-owo-online/" class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
+                                    <span class="text-xs font-bold">Lin</span>
+                                </a>
                                 <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer">
                                     <span class="text-xs font-bold">G</span>
                                 </div>

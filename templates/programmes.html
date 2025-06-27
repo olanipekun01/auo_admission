@@ -103,13 +103,13 @@
     <nav class="bg-white lg:bg-green-600 hidden lg:block" id="navBar">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-centre justify-center items-center lg:space-x-8 py-3">
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
-                <a href="" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
+                <a href="www.achievers.edu.ng" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
+                <a href="/" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
+                <a href="/degree-programme" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
+                <a href="/admission-list" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
                 <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BROCHURE</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
+                <a href="/our-policy" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
+                <a href="/booking" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
             </div>
         </div>
     </nav>
@@ -138,17 +138,18 @@
                         <span class="font-semibold">News</span>
                     </div>
                     <div class="p-6">
+                        
                         <div class="bg-green-100 rounded-lg p-6 relative">
-                            {% comment %} <div class="absolute top-4 right-4">
-                                <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-blue-500 rounded-full flex items-center justify-center">
-                                    <div class="text-white text-xs font-bold text-center">CORE<br>VALUES</div>
+                            {% comment %} <div class="absolute top-2 right-4">
+                                <div class="w-18 h-18 bg-gradient-to-br from-red-500 to-blue-500 rounded-full flex items-center justify-center">
+                                    <div class="text-white text-[6px] font-bold text-center">CORE<br>VALUES</div>
                                 </div>
                             </div> {% endcomment %}
-                            <h3 class="text-xl font-bold text-green-800 mb-4">CORE VALUES</h3>
+                            <h3 class="text-xl font-bold text-green-800 mb-4">OUR MISSION</h3>
                             <p class="text-gray-700 text-sm leading-relaxed">
-                                As our guiding philosophy, the Achievers experience is anchored on Seven (7) Core values which
-                                are: Spirituality, Possibility mentality, Capacity Building, Integrity, Responsibility, Diligence
-                                and sacrifice.
+                                To provide the enabling environment – physically and academically – for the production
+                                 of competent and quality graduates who would be self-reliant, highly productive 
+                                 and globally relevant in every sphere of human endeavour.
                             </p>
                             <div class="mt-4 text-green-800 font-bold">#ACHIEVERS UNIVERSITY</div>
                         </div>
@@ -161,81 +162,349 @@
                     <div class="space-y-4">
                         <!-- College of Agricultural Sciences -->
                         <div class="border border-gray-200 rounded-lg overflow-hidden">
-                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="agricultural">
-                                <span class="text-lg font-semibold">College of Agricultural Sciences</span>
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="medicine">
+                                <span class="text-lg font-semibold">College of Medicine</span>
                                 <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
                             </button>
-                            <div id="college-content-agricultural" class="college-content hidden bg-white p-6 space-y-6">
+                            <div id="college-content-medicine" class="college-content hidden bg-white p-6 space-y-6">
                                 <div>
-                                    <h4 class="font-bold text-lg mb-2">Agricultural Economics</h4>
-                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
-                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> English Language, Mathematics, Biology, Chemistry, Physics, Agricultural Science, Economics or Geography.</p>
-                                    <p class="text-sm"><strong>UTME Criteria:</strong> English Language, Mathematics, Biology, Chemistry or Physics.</p>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg mb-2">Animal Science</h4>
-                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
-                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> English Language, Mathematics, Biology, Chemistry, Physics, Agricultural Science.</p>
-                                    <p class="text-sm"><strong>UTME Criteria:</strong> English Language, Mathematics, Biology, Chemistry.</p>
+                                    <h4 class="font-bold text-lg mb-2">MBBS. – Medicine & Surgery</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 6 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- College of Engineering -->
                         <div class="border border-gray-200 rounded-lg overflow-hidden">
                             <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="engineering">
-                                <span class="text-lg font-semibold">College of Engineering</span>
+                                <span class="text-lg font-semibold">College of Engineering & Technology</span>
                                 <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
                             </button>
                             <div id="college-content-engineering" class="college-content hidden bg-white p-6 space-y-6">
                                 <div>
-                                    <h4 class="font-bold text-lg mb-2">Civil Engineering</h4>
+                                    <h4 class="font-bold text-lg mb-2">B.Eng. Electrical & Electronics Engineering</h4>
                                     <p class="text-sm mb-2"><strong>Programme Duration:</strong> 5 years</p>
-                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> English Language, Mathematics, Physics, Chemistry, Further Mathematics or Technical Drawing.</p>
-                                    <p class="text-sm"><strong>UTME Criteria:</strong> English Language, Mathematics, Physics, Chemistry.</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg mb-2">Electrical/Electronics Engineering</h4>
+                                    <h4 class="font-bold text-lg mb-2">B.Eng. Computer Engineering</h4>
                                     <p class="text-sm mb-2"><strong>Programme Duration:</strong> 5 years</p>
-                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> English Language, Mathematics, Physics, Chemistry, Further Mathematics or Technical Drawing.</p>
-                                    <p class="text-sm"><strong>UTME Criteria:</strong> English Language, Mathematics, Physics, Chemistry.</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Eng. Mechatronics Engineering</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 5 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Eng. Biomedical Engineering</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 5 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Eng. Mechanical Engineering</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 5 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Eng. Civil & Environmental Engineering</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 5 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- College of Pure and Applied Sciences -->
+                        <!-- College of Conas -->
                         <div class="border border-gray-200 rounded-lg overflow-hidden">
-                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="pure-applied">
-                                <span class="text-lg font-semibold">College of Pure and Applied Sciences</span>
-                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">−</div>
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="conas">
+                                <span class="text-lg font-semibold">College of Natural & Applied Sciences</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
                             </button>
-                            <div id="college-content-pure-applied" class="college-content bg-white p-6 space-y-6">
+                            <div id="college-content-conas" class="college-content hidden bg-white p-6 space-y-6">
                                 <div>
-                                    <h4 class="font-bold text-lg mb-2">Biochemistry</h4>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Microbiology</h4>
                                     <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
-                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> English Language, Mathematics, Biology, Chemistry and one of the following Physics, Agricultural Science, Food and Nutrition.</p>
-                                    <p class="text-sm"><strong>UTME Criteria:</strong> English Language, Biology, Chemistry, Physics or Mathematics.</p>
+                                   <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg mb-2">Microbiology</h4>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Industrial Chemistry</h4>
                                     <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
-                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> English Language, Mathematics, Biology, Chemistry and Physics or one of Further Mathematics, Technical Drawing, Agricultural Science, Food and Nutrition.</p>
-                                    <p class="text-sm"><strong>UTME Criteria:</strong> English Language, Biology, Chemistry, Physics or Mathematics.</p>
+                                   <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg mb-2">Computer Science</h4>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Biochemistry</h4>
                                     <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
-                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> English Language, Mathematics, Physics, Chemistry and one of Biology, Agricultural Science, Economics, Geography.</p>
-                                    <p class="text-sm"><strong>UTME Criteria:</strong> English Language, Mathematics, Physics, Chemistry.</p>
+                                   <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-lg mb-2">Mathematics</h4>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Computer Science</h4>
                                     <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
-                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> English Language, Mathematics, Physics, Chemistry and one of Biology, Agricultural Science, Economics, Geography.</p>
-                                    <p class="text-sm"><strong>UTME Criteria:</strong> English Language, Mathematics, Physics, Chemistry.</p>
+                                   <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Geology</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                   <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Plant Science & Biotechnology</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                   <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Remote Sensing and Geoscience Information System</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                   <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- College of Cosmas -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="cosmas">
+                                <span class="text-lg font-semibold">College of Social & Management Sciences</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">+</div>
+                            </button>
+                            <div id="college-content-cosmas" class="college-content hidden bg-white p-6 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Accounting</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Business Administration</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Economics</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Political Science</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. International Relations (including a three-month French language programme abroad)</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Public Administration</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Sociology</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Criminology & Security Studies</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Mass Communication</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Procurement Management</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Banking and Finance</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- College of Education -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="education">
+                                <span class="text-lg font-semibold">Faculty of Education</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">−</div>
+                            </button>
+                            <div id="college-content-education" class="college-content bg-white p-6 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Ed. Guidance and Counselling</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.LIS. Library and Information Science</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. (Ed.) Chemistry</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. (Ed.) Biology</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- College of Education -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="law">
+                                <span class="text-lg font-semibold">College of Law</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">−</div>
+                            </button>
+                            <div id="college-content-law" class="college-content bg-white p-6 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">LL.B. Bachelor of Law</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 5 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="bms">
+                                <span class="text-lg font-semibold">Faculty of Basic Medical Sciences</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">−</div>
+                            </button>
+                            <div id="college-content-bms" class="college-content bg-white p-6 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Human Anatomy</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Human Physiology</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="ahs">
+                                <span class="text-lg font-semibold">Faculty of Allied Health Sciences</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">−</div>
+                            </button>
+                            <div id="college-content-ahs" class="college-content bg-white p-6 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">DPT. – Doctor of Physiotherapy</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 6 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Public Health</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.Sc. Health Information Management</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 4 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- faculty of mls -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="mls">
+                                <span class="text-lg font-semibold">Faculty of Medical Laboratory Science</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">−</div>
+                            </button>
+                            <div id="college-content-mls" class="college-content bg-white p-6 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B.MLS Medical Laboratory Science</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 5 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- faculty of nursing -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="nursing">
+                                <span class="text-lg font-semibold">Faculty of Nursing Science</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">−</div>
+                            </button>
+                            <div id="college-content-nursing" class="college-content bg-white p-6 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">B. N Sc. Nursing Science</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 5 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- faculty of pharmacy -->
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="college-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-college="pharmacy">
+                                <span class="text-lg font-semibold">Faculty of Pharmaceutical Sciences</span>
+                                <div class="toggle-icon bg-yellow-500 text-black w-8 h-8 rounded flex items-center justify-center font-bold">−</div>
+                            </button>
+                            <div id="college-content-pharmacy" class="college-content bg-white p-6 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Pharm. D. – Doctor of Pharmacy</h4>
+                                    <p class="text-sm mb-2"><strong>Programme Duration:</strong> 6 years</p>
+                                    <p class="text-sm mb-2"><strong>O'Level Criteria:</strong> Should include English Language, Mathematics and any three other subjects relevant to the proposed course of study.</p>
+                                    <p class="text-sm"><strong>UTME Criteria:</strong> Candidates are required to have sat for the Unified Tertiary Matriculation Examination (UTME) with a minimum score of 140 as approved by JAMB. </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -246,19 +515,15 @@
                 <button onClick="handleApply()" class="w-full bg-red-500 hover:bg-red-600 text-white py-6 text-xl font-bold rounded">APPLY NOW</button>
                 <!-- Navigation Links -->
                 <div class="space-y-2 flex flex-col">
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">DEPARTURE PHILOSOPHY</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">ADMISSION POLICY</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">REQUIREMENTS</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">APPLICATION INSTRUCTION</button>
-                    <button class="w-full text-left text-green-600 bg-green-50 px-4 py-3 rounded">DEGREE PROGRAMMES</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">INTERNATIONAL STUDENT COMMUNITY</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">GIVEN ADMISSION - WHAT NEXT?</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">HOW TO MAKE SCHOOL FEES AND ACCEPTANCE FEES PAYMENT</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">VISIT ACHIEVERS UNIVERSITY</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">PROHIBITED ITEMS</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">FAQ</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">STUDENT HANDBOOK</button>
-                    <button class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">DISCLAIMER</button>
+                    <a href="/our-policy" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">ADMISSION POLICY</a>
+                    <a href="/requirements" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">REQUIREMENTS</a>
+                    <a href="/application-instruction" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">APPLICATION INSTRUCTION</a>
+                    <a href="/degree-programme" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">DEGREE PROGRAMMES</a>
+                    <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">HOW TO MAKE SCHOOL FEES AND ACCEPTANCE FEES PAYMENT</a>
+                    <a href="/visit-university" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">VISIT ACHIEVERS UNIVERSITY</a>
+                    <a href="/faq" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">FAQ</a>
+                    <a href="" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">STUDENT HANDBOOK</a>
+                    <a href="/disclaimer" class="w-full text-left text-green-600 hover:bg-green-50 px-4 py-3 rounded">DISCLAIMER</a>
                 </div>
             </div>
         </div>
@@ -279,6 +544,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="bg-green-600 text-white">
         <div class="py-12">
             <div class="container mx-auto px-4">
@@ -287,33 +553,30 @@
                     <div>
                         <h3 class="font-bold text-lg mb-4">INFORMATION ABOUT</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:underline">The university</a></li>
-                            <li><a href="#" class="hover:underline">Fees & Funding</a></li>
-                            <li><a href="#" class="hover:underline">Libraries</a></li>
-                            <li><a href="#" class="hover:underline">Sport @ AU</a></li>
-                            <li><a href="#" class="hover:underline">Health Care @ AU</a></li>
-                            <li><a href="#" class="hover:underline">Students Affairs</a></li>
+                            <li><a href="www.achievers.edu.ng" class="hover:underline">The university</a></li>
+                            <li><a href="www.achievers.edu.ng/academics/undergraduate-fees" class="hover:underline">Fees & Funding</a></li>
+                            <li><a href="www.achievers.edu.ng/academics/library/" class="hover:underline">Libraries</a></li>
                         </ul>
                     </div>
                     <!-- Information For -->
                     <div>
                         <h3 class="font-bold text-lg mb-4">INFORMATION FOR</h3>
-                        <ul class="space-y-2 text-sm">
+                        {% comment %} <ul class="space-y-2 text-sm">
                             <li><a href="#" class="hover:underline">Prospective Students</a></li>
                             <li><a href="#" class="hover:underline">Current Students</a></li>
                             <li><a href="#" class="hover:underline">Parents & Guardians</a></li>
                             <li><a href="#" class="hover:underline">Current Staff</a></li>
                             <li><a href="#" class="hover:underline">Visitors & Tourist</a></li>
                             <li><a href="#" class="hover:underline">Alumni</a></li>
-                        </ul>
+                        </ul> {% endcomment %}
                     </div>
                     <!-- Quick Links -->
                     <div>
                         <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:underline">Contact us</a></li>
-                            <li><a href="#" class="hover:underline">Job & vacancies</a></li>
-                            <li><a href="#" class="hover:underline">Media</a></li>
+                            <li><a href="/contact" class="hover:underline">Contact us</a></li>
+                            <li><a href="/degree-programme" class="hover:underline">Degree Programme</a></li>
+                            <li><a href="/faq" class="hover:underline">FAQ</a></li>
                         </ul>
                     </div>
                     <!-- Reaching Us -->
@@ -336,8 +599,8 @@
                                 </div>
                                 <div>
                                     <p>8 A.M. - 5 P.M.</p>
-                                    <p>+234 8168064525</p>
-                                    <p>+234 7038505649</p>
+                                    <p>+234 8037062508</p>
+                                    <p>+234 8060266505</p>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-2">
@@ -353,23 +616,23 @@
                         <h3 class="font-bold text-lg mb-4">SOCIAL COMMUNITY</h3>
                         <div class="space-y-3">
                             <div class="flex space-x-3">
-                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
+                                <a href="https://web.facebook.com/AchieversUniversityOwoOnline/" class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
                                     <span class="text-xs font-bold">f</span>
-                                </div>
-                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
+                                </a>
+                                <a href="https://x.com/AchieversUni" class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
                                     <span class="text-xs font-bold">t</span>
-                                </div>
-                                <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
+                                </a>
+                                <a href="https://www.instagram.com/achieversuniversityowo/" class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
                                     <span class="text-xs font-bold">in</span>
-                                </div>
+                                </a>
                             </div>
                             <div class="flex space-x-3">
-                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
+                                <a href="https://www.youtube.com/@achieversuniversity-tv5616" class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
                                     <span class="text-xs font-bold">▶</span>
-                                </div>
-                                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
-                                    <span class="text-xs font-bold">in</span>
-                                </div>
+                                </a>
+                                <a href="https://www.linkedin.com/school/achievers-university-owo-online/" class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
+                                    <span class="text-xs font-bold">Lin</span>
+                                </a>
                                 <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer">
                                     <span class="text-xs font-bold">G</span>
                                 </div>
@@ -398,7 +661,6 @@
         </div>
     </footer>
 
-
     <script>
 
     const menuBar = document.getElementById('menuBar');
@@ -419,7 +681,7 @@
     });
 
     function handleApply() {
-        window.location.href = '/degree-programme';
+        window.location.href = 'http://apply.achievers.edu.ng/';
     }
     </script>
 </body>

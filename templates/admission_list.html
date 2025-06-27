@@ -29,7 +29,7 @@
                 biochemistry: [
                     { admissionNo: "2400445", lastName: "IBRAHIM", firstName: "FATIMA", otherName: "AISHA", programme: "Biochemistry" },
                     { admissionNo: "2400332", lastName: "JOHNSON", firstName: "PETER", otherName: "EMEKA", programme: "Biochemistry" },
-                ],
+                ], 
             };
 
             // Form handling
@@ -137,13 +137,13 @@
     <nav class="bg-white lg:bg-green-600 hidden lg:block " id="navBar">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-centre justify-center items-center lg:space-x-8 py-3">
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
-                <a href="" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
+                <a href="www.achievers.edu.ng" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">MAIN SITE ▼</a>
+                <a href="/" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">HOME</a>
+                <a href="/degree-programme" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">DEGREE PROGRAMMES</a>
+                <a href="/admission-list" class="text-green-600 lg:text-white bg-green-700 px-4 py-2 rounded">ADMISSION LIST</a>
                 <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BROCHURE</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
-                <a href="" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
+                <a href="/our-policy" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">OUR POLICY</a>
+                <a href="/booking" class="text-green-600 lg:text-white hover:bg-green-700 px-4 py-2 rounded">BOOKING FOR SERVICES</a>
             </div>
         </div>
     </nav>
@@ -155,7 +155,7 @@
                 <i data-lucide="home" class="w-4 h-4"></i>
                 <span>Admission</span>
                 <i data-lucide="chevron-down" class="w-4 h-4 rotate-[-90deg]"></i>
-                <span class="font-semibold">2024/2025 Admission List</span>
+                <span class="font-semibold">2025/2026 Admission List</span>
             </div>
         </div>
     </div>
@@ -166,11 +166,12 @@
             <!-- Main Content -->
             <div class="lg:col-span-3">
                 <div class="mb-8">
-                    <h1 class="text-3xl font-bold text-gray-800 mb-2">2024/2025 PROVISIONAL OFFER LIST - BATCH 1</h1>
+                    <h1 class="text-3xl font-bold text-gray-800 mb-2">2025/2026 PROVISIONAL OFFER LIST - BATCH 1</h1>
                     <p class="text-red-600 font-medium">Please note that this offer is subject to JAMB ratification</p>
+                     <p class="text-red-600 font-medium">Not released yet!</p>
                 </div>
 
-                <div class="space-y-4">
+                {% comment %} <div class="space-y-4">
                     <!-- Accounting -->
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button class="programme-toggle w-full bg-green-600 text-white px-6 py-4 flex items-center justify-between hover:bg-green-700 transition-colors" data-programme="accounting">
@@ -360,7 +361,7 @@
                         </button>
                         <div id="programme-content-civil-engineering" class="programme-content hidden bg-white"></div>
                     </div>
-                </div>
+                </div> {% endcomment %}
 
                 <!-- Contact Section -->
                 <div class="mt-8 bg-white shadow rounded-lg p-6">
@@ -419,33 +420,30 @@
                     <div>
                         <h3 class="font-bold text-lg mb-4">INFORMATION ABOUT</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:underline">The university</a></li>
-                            <li><a href="#" class="hover:underline">Fees & Funding</a></li>
-                            <li><a href="#" class="hover:underline">Libraries</a></li>
-                            <li><a href="#" class="hover:underline">Sport @ AU</a></li>
-                            <li><a href="#" class="hover:underline">Health Care @ AU</a></li>
-                            <li><a href="#" class="hover:underline">Students Affairs</a></li>
+                            <li><a href="www.achievers.edu.ng" class="hover:underline">The university</a></li>
+                            <li><a href="www.achievers.edu.ng/academics/undergraduate-fees" class="hover:underline">Fees & Funding</a></li>
+                            <li><a href="www.achievers.edu.ng/academics/library/" class="hover:underline">Libraries</a></li>
                         </ul>
                     </div>
                     <!-- Information For -->
                     <div>
                         <h3 class="font-bold text-lg mb-4">INFORMATION FOR</h3>
-                        <ul class="space-y-2 text-sm">
+                        {% comment %} <ul class="space-y-2 text-sm">
                             <li><a href="#" class="hover:underline">Prospective Students</a></li>
                             <li><a href="#" class="hover:underline">Current Students</a></li>
                             <li><a href="#" class="hover:underline">Parents & Guardians</a></li>
                             <li><a href="#" class="hover:underline">Current Staff</a></li>
                             <li><a href="#" class="hover:underline">Visitors & Tourist</a></li>
                             <li><a href="#" class="hover:underline">Alumni</a></li>
-                        </ul>
+                        </ul> {% endcomment %}
                     </div>
                     <!-- Quick Links -->
                     <div>
                         <h3 class="font-bold text-lg mb-4">QUICK LINKS</h3>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:underline">Contact us</a></li>
-                            <li><a href="#" class="hover:underline">Job & vacancies</a></li>
-                            <li><a href="#" class="hover:underline">Media</a></li>
+                            <li><a href="/contact" class="hover:underline">Contact us</a></li>
+                            <li><a href="/degree-programme" class="hover:underline">Degree Programme</a></li>
+                            <li><a href="/faq" class="hover:underline">FAQ</a></li>
                         </ul>
                     </div>
                     <!-- Reaching Us -->
@@ -468,8 +466,8 @@
                                 </div>
                                 <div>
                                     <p>8 A.M. - 5 P.M.</p>
-                                    <p>+234 8168064525</p>
-                                    <p>+234 7038505649</p>
+                                    <p>+234 8037062508</p>
+                                    <p>+234 8060266505</p>
                                 </div>
                             </div>
                             <div class="flex items-center space-x-2">
@@ -485,23 +483,23 @@
                         <h3 class="font-bold text-lg mb-4">SOCIAL COMMUNITY</h3>
                         <div class="space-y-3">
                             <div class="flex space-x-3">
-                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
+                                <a href="https://web.facebook.com/AchieversUniversityOwoOnline/" class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 cursor-pointer">
                                     <span class="text-xs font-bold">f</span>
-                                </div>
-                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
+                                </a>
+                                <a href="https://x.com/AchieversUni" class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 cursor-pointer">
                                     <span class="text-xs font-bold">t</span>
-                                </div>
-                                <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
+                                </a>
+                                <a href="https://www.instagram.com/achieversuniversityowo/" class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-900 cursor-pointer">
                                     <span class="text-xs font-bold">in</span>
-                                </div>
+                                </a>
                             </div>
                             <div class="flex space-x-3">
-                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
+                                <a href="https://www.youtube.com/@achieversuniversity-tv5616" class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 cursor-pointer">
                                     <span class="text-xs font-bold">▶</span>
-                                </div>
-                                <div class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
-                                    <span class="text-xs font-bold">in</span>
-                                </div>
+                                </a>
+                                <a href="https://www.linkedin.com/school/achievers-university-owo-online/" class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 cursor-pointer">
+                                    <span class="text-xs font-bold">Lin</span>
+                                </a>
                                 <div class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900 cursor-pointer">
                                     <span class="text-xs font-bold">G</span>
                                 </div>
